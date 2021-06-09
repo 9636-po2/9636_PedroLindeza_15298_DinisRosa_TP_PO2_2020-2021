@@ -53,15 +53,11 @@ public class GameModel {
     }
 
     private boolean isValidPos(int row, int col) {
-        if (isWithinBoardLimits(row, col) && rockfordIsAdjacent(row, col) && isWalkable(row, col)) {
-            return true;
-        } else return false;
+        return isWithinBoardLimits(row, col) && rockfordIsAdjacent(row, col) && isWalkable(row, col);
     }
 
     private boolean isRockValidPos(int row, int col) {
-        if (isWithinBoardLimits(row, col) && isWalkable(row, col) && isPassable(row, col)) {
-            return true;
-        } else return false;
+        return isWithinBoardLimits(row, col) && isWalkable(row, col) && isPassable(row, col);
     }
 
     private boolean isWalkable(int row, int col) {
@@ -84,9 +80,7 @@ public class GameModel {
     private boolean rockfordIsAdjacent(int row, int col) {
         if (rockford.getRow() == row && (rockford.getCol() == col + 1 || rockford.getCol() == col - 1)) {
             return true;
-        } else if (rockford.getCol() == col && (rockford.getRow() == row + 1 || rockford.getRow() == row - 1)) {
-            return true;
-        } else return false;
+        } else return rockford.getCol() == col && (rockford.getRow() == row + 1 || rockford.getRow() == row - 1);
     }
 
     public boolean checkRockOnRockPos(int row, int col) {
@@ -120,9 +114,7 @@ public class GameModel {
     }
 
     private boolean isWithinBoardLimits(int row, int col) {
-        if (row >= 0 && row < getHeight() && col >= 0 && col < getWidth()) {
-            return true;
-        } else return false;
+        return row >= 0 && row < getHeight() && col >= 0 && col < getWidth();
     }
 
     public int getHeight() {
