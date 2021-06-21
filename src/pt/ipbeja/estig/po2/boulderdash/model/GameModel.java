@@ -83,6 +83,10 @@ public class GameModel {
         } else return rockford.getCol() == col && (rockford.getRow() == row + 1 || rockford.getRow() == row - 1);
     }
 
+    public boolean isFloor(int row, int col) {
+        return map[row][col].isWalkable() && map[row][col].isPassable() && !this.isRock(row, col);
+    }
+
     public boolean checkRockOnRockPos(int row, int col) {
         for (Rock rock : rocks) {
             if (rock.getRow() == row && rock.getCol() == col) {
