@@ -39,4 +39,33 @@ public class GameModelTest {
         assertEquals(1, rockford.getRow());
         assertEquals(2, rockford.getCol());
     }
+
+    @Test
+    public void testeC(){
+        int row = 1;
+        int col = 2;
+
+        boolean isBoxThere = this.model.isRock(row, col);
+        boolean validMove = this.model.moveRockford(row, col);
+
+        assertTrue(isBoxThere);
+        assertFalse(validMove);
+        assertEquals(1, rockford.getRow());
+        assertEquals(3, rockford.getCol());
+    }
+
+    @Test
+    public void testeD(){
+
+    }
+
+    @Test
+    public void testeE(){
+
+    }
+
+    @Test
+    public void testeF(){
+
+    }
 }
