@@ -8,14 +8,14 @@ public class BoulderdashButton extends Button {
     private int row;
     private int col;
 
-    private final ImageView imageView;
+    //private final ImageView imageView;
     private static final Image WALL = new Image("/resources/Wall.png");
 
-    public BoulderdashButton(int row, int col, ImageView imageView) {
+    public BoulderdashButton(int row, int col) {
         this.row = row;
         this.col = col;
-        this.imageView = imageView;
-        this.setGraphic(imageView);
+        //this.imageView = imageView;
+        //this.setGraphic(imageView);
     }
 
     public int getRow() {
@@ -26,9 +26,9 @@ public class BoulderdashButton extends Button {
         return col;
     }
 
-    public void setWall() {
+    /*public void setWall() {
         this.imageView.setImage(WALL);
-    }
+    }*/
 
 
 }

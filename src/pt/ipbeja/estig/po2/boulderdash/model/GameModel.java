@@ -121,11 +121,23 @@ public class GameModel {
         return row >= 0 && row < getHeight() && col >= 0 && col < getWidth();
     }
 
+    public AbstractPosition[][] getMap() {
+        return map;
+    }
+
     public int getHeight() {
         return map.length;
     }
 
     public int getWidth() {
         return map[0].length;
+    }
+
+    public List<Rock> getRocks() {
+        return rocks;
+    }
+
+    public Rockford getRockford() {
+        return rockford;
     }
 }
