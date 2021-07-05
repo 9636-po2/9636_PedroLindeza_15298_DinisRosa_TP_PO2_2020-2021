@@ -17,6 +17,9 @@ public class Board extends GridPane{
         createButtonGrid(this.model);
     }
 
+    public Board(GameModel model) {
+    }
+
     public void createButtonGrid(GameModel model) {
         this.model = model;
         
